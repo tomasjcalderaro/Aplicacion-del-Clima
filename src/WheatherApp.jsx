@@ -1,0 +1,44 @@
+import { useState } from "react"
+
+export const WheatherApp = () => {
+    
+    const urlBase = 'https://api.openweathermap.org/data/2.5/weather'
+    const API_KEY = '89e9b54b8d2445792128de8c4c53d9bd'
+
+    const [ciudad, setCiudad] = useState('')
+    const [dataClima, setDataClima] = useState(null)
+
+    const handleCambioCiudad = (e) => {
+        setCiudad(e.target.value)
+    }
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if(ciudad.length > 0) fetchClima()
+    }
+    const fetchClima = async () => {
+        try{
+            const response = await fetch(`${urlBase}?l={ciudad}&appid=${API_KEY}`) 
+            const data = await response.json()
+            setDataClima(data)
+        }catch(error){
+            console.error('Ocurrio el siguiente error: ', error)
+        }
+    }
+    return (
+        <div className="container">
+            <h1>Aplicacion De Clima</h1>
+            <form onSubmit={handleSubmit}>
+                <input 
+                type="text"
+                placeholder="Escriba Aqui"
+                value={ciudad}
+                onChange={handleCambioCiudad}
+                />
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    )
+}
+
+
