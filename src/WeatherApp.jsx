@@ -115,8 +115,8 @@ export const WeatherApp = () => {
                             dataClima.weather && dataClima.weather.length > 0 
                                 ? dataClima.weather[0].description 
                                 : 'No disponible'} {/* Manejo defensivo */} 
-                                
                             </p>
+                            <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} />
                         
                     </div>
                 )
