@@ -4,6 +4,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        background-color: #BFBFBF;
     }
 
     .container {
@@ -83,4 +84,95 @@
         width: 40px;
         height: 40px;
     }
+}
+
+/* Estilo por defecto */
+.default-background {
+    background: linear-gradient(to bottom, #87CEEB, #E0F2F7); /* Cielo claro */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+/* Cielo despejado */
+.clear-sky-background {
+    background-image: url('https://images.unsplash.com/photo-1508051949040-e17517924f21?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Un cielo azul brillante */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Nublado */
+.cloudy-background {
+    background-image: url('https://images.unsplash.com/photo-1501630834285-412230f34845?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Nubes grises y suaves */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Lluvioso */
+.rainy-background {
+    background-image: url('https://images.unsplash.com/photo-1534274988757-d2d2b6263f87?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Gotas de lluvia en una ventana o paisaje lluvioso */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Tormenta */
+.thunderstorm-background {
+    background-image: url('https://images.unsplash.com/photo-1561484930-998b603b6168?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Rayos o nubes de tormenta oscuras */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Nevado */
+.snowy-background {
+    background-image: url('https://images.unsplash.com/photo-1542601098-8fc114e2e104?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Paisaje nevado */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Niebla/Bruma */
+.misty-background {
+    background-image: url('https://images.unsplash.com/photo-1498496294664-bc8a3a222401?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Paisaje con niebla */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Caluroso */
+.hot-background {
+    background: linear-gradient(to bottom, #FFD700, #FFA500); /* Tonos cálidos de atardecer/amanecer */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+/* Frío */
+.cold-background {
+    background: linear-gradient(to bottom, #ADD8E6, #B0E0E6); /* Tonos fríos de invierno */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+/* Asegúrate de que el contenedor tenga una altura para que el fondo sea visible */
+.container {
+    min-height: 100vh; /* O la altura que necesites */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white; /* Para que el texto sea visible sobre fondos oscuros */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-top: 10px;
 }
